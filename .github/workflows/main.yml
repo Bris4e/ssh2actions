@@ -1,3 +1,0 @@
-name: Start SSH via tmate
-
-  uses: batianVolyc/ssh2actions/tmate2actions.sh
