@@ -1,0 +1,3 @@
+name: Start SSH via tmate
+
+  uses: Bris4e/ssh2actions@main
