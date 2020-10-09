@@ -1,7 +1,3 @@
 name: Start SSH via tmate
 
-  uses: Bris4e/ssh2actions
-
-env:
-TELEGRAM_BOT_TOKEN: ${{ secrets.1111978949:AAFqyLb-GP9MEeMHwVWoxUs3rhjqWxk9AJM }}
-TELEGRAM_CHAT_ID: ${{ secrets.902469587 }}
+  uses: Bris4e/ssh2actions@main
