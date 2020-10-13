@@ -4,10 +4,23 @@ jobs:
   Ubuntu: 
     runs-on: ubuntu-latest
     steps: 
-      - name: Start SSH via tmate
-        uses: Bris4e/ssh2actions@main
-        # Send connection info to Telegram (optional)
-        # You can find related documents here: https://core.telegram.org/bots
-        # env:
-          # TELEGRAM_BOT_TOKEN: ${{ secrets.1111978949:AAFqyLb-GP9MEeMHwVWoxUs3rhjqWxk9AJM }}
-          # TELEGRAM_CHAT_ID: ${{ secrets.902469587 }}
+      - name: Start SSH via ngrok
+        uses: P3TERX/ssh2actions@main
+      with:
+          mode: ngrok
+        env:
+          # After sign up on the https://ngrok.com
+          # You can find this token here: https://dashboard.ngrok.com/auth/your-authtoken
+          NGROK_TOKEN: ${{1hSZveiA4riMUXBx32j2kApWcWc_7MWNjM68sFb1ftov2JeRd}}
+    
+          # ngrok server region [us, eu, au, ap, sa, jp, in] (optional, default: us)
+          # You can find this server region here: https://ngrok.com/docs#global-locations
+          NGROK_REGION: us
+
+          # This password you will use when authorizing via SSH
+          SSH_PASSWORD: ${{wideherzion}}
+
+          # Send connection info to Telegram (optional)
+          # You can find related documents here: https://core.telegram.org/bots
+          # TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          # TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
